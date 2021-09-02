@@ -9,13 +9,29 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView {
+            List(conferencesData) {
+                conference in
+                VStack(alignment: .leading) {
+                    NavigationLink(destination: ConferenceDetail(conference: conference)) {
+                        Text(conference.name).font(.headline)
+                        Text(conference.location).font(.subheadline)
+                    }
+                }
+            }.navigationBarTitle("Conferences")
+        }
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+class ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
+
+    #if DEBUG
+    @objc class func injected() {
+        UIApplication.shared.windows.first?.rootViewController =
+                UIHostingController(rootView: ContentView())
+    }
+    #endif
 }

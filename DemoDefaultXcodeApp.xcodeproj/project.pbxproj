@@ -15,6 +15,10 @@
 		1F7FB89426E0951D00654310 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7FB86926E0951C00654310 /* ContentView.swift */; };
 		1F7FB89526E0951D00654310 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F7FB86A26E0951D00654310 /* Assets.xcassets */; };
 		1F7FB89626E0951D00654310 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F7FB86A26E0951D00654310 /* Assets.xcassets */; };
+		214AA11A87DEDAFDFDDC8789 /* conferencesData.json in Resources */ = {isa = PBXBuildFile; fileRef = 214AA48942277C7E40222B9E /* conferencesData.json */; };
+		214AA67CE86BF3612D9BD22C /* Conference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214AA4CF49302947BFDD8F83 /* Conference.swift */; };
+		214AA817D68B85F0D1833F60 /* ConferenceDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214AABAC43D43628851B98EF /* ConferenceDetail.swift */; };
+		214AAAD18D9A902CADC5568C /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214AA02E5A4C08BC32400B68 /* Data.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		1F7FB88A26E0951D00654310 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F7FB88E26E0951D00654310 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		1F7FB89026E0951D00654310 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		214AA02E5A4C08BC32400B68 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		214AA48942277C7E40222B9E /* conferencesData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = conferencesData.json; sourceTree = "<group>"; };
+		214AA4CF49302947BFDD8F83 /* Conference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Conference.swift; sourceTree = "<group>"; };
+		214AABAC43D43628851B98EF /* ConferenceDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConferenceDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +109,9 @@
 				1F7FB86826E0951C00654310 /* DemoDefaultXcodeAppApp.swift */,
 				1F7FB86926E0951C00654310 /* ContentView.swift */,
 				1F7FB86A26E0951D00654310 /* Assets.xcassets */,
+				214AA11DC23736C412FA7B04 /* Resources */,
+				214AA820780E3893B8756E40 /* Model */,
+				214AABAC43D43628851B98EF /* ConferenceDetail.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -149,6 +160,23 @@
 				1F7FB89026E0951D00654310 /* Info.plist */,
 			);
 			path = "Tests macOS";
+			sourceTree = "<group>";
+		};
+		214AA11DC23736C412FA7B04 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				214AA48942277C7E40222B9E /* conferencesData.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		214AA820780E3893B8756E40 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				214AA02E5A4C08BC32400B68 /* Data.swift */,
+				214AA4CF49302947BFDD8F83 /* Conference.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,6 +304,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F7FB89526E0951D00654310 /* Assets.xcassets in Resources */,
+				214AA11A87DEDAFDFDDC8789 /* conferencesData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +339,9 @@
 			files = (
 				1F7FB89326E0951D00654310 /* ContentView.swift in Sources */,
 				1F7FB89126E0951D00654310 /* DemoDefaultXcodeAppApp.swift in Sources */,
+				214AAAD18D9A902CADC5568C /* Data.swift in Sources */,
+				214AA67CE86BF3612D9BD22C /* Conference.swift in Sources */,
+				214AA817D68B85F0D1833F60 /* ConferenceDetail.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
