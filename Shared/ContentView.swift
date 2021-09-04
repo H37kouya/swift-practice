@@ -10,15 +10,26 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         NavigationView {
-            List(conferencesData) {
-                conference in
-                VStack(alignment: .leading) {
-                    NavigationLink(destination: ConferenceDetail(conference: conference)) {
-                        Text(conference.name).font(.headline)
-                        Text(conference.location).font(.subheadline)
+            VStack{
+                List(conferencesData) {
+                    conference in
+                    VStack(alignment: .leading) {
+                        NavigationLink(destination: ConferenceDetail(conference: conference)) {
+                            Text(conference.name).font(.headline)
+                            Text(conference.location).font(.subheadline)
+                        }
                     }
                 }
-            }.navigationBarTitle("Conferences")
+                        .navigationBarTitle("Conferences")
+
+                NavigationLink(destination: DemoTabView()) {
+                    Text("DemoTabViewへ").font(.headline)
+                }
+
+                NavigationLink(destination: LazyVStackView()) {
+                    Text("LazeVStackView").font(.headline)
+                }
+            }
         }
     }
 }
